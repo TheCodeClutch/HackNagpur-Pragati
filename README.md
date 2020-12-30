@@ -19,13 +19,40 @@ Apart from making money, they can access women-centric news, raise questions, do
 6. We have also created a PWA (Progressive Web App) for easy phone accessibility.
 
 
-##### For our talented artists
+##### An attempt to keep dying Indian artifact culture alive
 
 It is no secret that today some of the most flourishing handicraft and artifact industries once started as small in-house businesses and initiatives taken up by women. But often socially backward women are not given a chance to prove their mettle which leads to the economic downfall as well as heritage loss of the country. As modernisation is transforming the nation, we almost fail to appreciate India’s traditional artifact culture that it was once famous for. Simple and beautiful handmade goods are overlooked and prioritized by imported and branded fancy goods as the country is growing economically. This is an effort from our side to help preserve India’s dying craft culture and uplift the artists who deserve to get much more success and recognition behind the efforts they are putting in the form of their passion and expertise.
 
 
 
-### [Check it out here!](https://risewithpragati.netlify.app/)
+### [Check out Pragati here!](https://risewithpragati.netlify.app/)
+
+
+
+## Project Creation
+
+### Frontend:
+
+1. Technical Stack Used: HTML, CSS, JAVASCRIPT
+2. Framework Used: Bootstrap
+3. Editor used: VS Code
+4. The Project can be run by opening the the index.html file leading to the home page.
+
+### Backend: 
+
+1. Technical Stack Used: NodeJS, MongoDB, ExpressJS, JWT
+2. Editor Used: VS Code
+
+Link to backend repo: https://github.com/TheCodeClutch/HackNagpur-Pragati-Backend
+
+### Deployment
+
+1. Database : Atlas MongoDB
+2. The Project is hosted on Netlify and is live at https://risewithpragati.netlify.app/
+3. Backend Server is deployed using Heroku
+
+
+
 
 ## Maintainers
 
