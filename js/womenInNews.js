@@ -15,10 +15,10 @@ window.onload = () => {
         return [...new Map(arr.map(item => [item[key], item])).values()]
     }
 
-    fetch('http://api.mediastack.com/v1/news?access_key=0fe6be7088aff123737658e7e1ddf9e4&keywords=successful%20women&countries=in&limit=50')
+    fetch('https://pragati-api.herokuapp.com/news')
         .then(res => res.json())
         .then(res => {
-            const newsOne = res.data;
+            const newsOne = res.message.data;
             news = getUniqueListBy(newsOne, 'title')
             let content = ""
             news.forEach(ele => {
