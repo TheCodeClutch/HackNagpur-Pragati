@@ -61,6 +61,7 @@ Link to backend repo: https://github.com/TheCodeClutch/HackNagpur-Pragati-Backen
 
 ## Project UI
 ![Web-Pragati](https://github.com/TheCodeClutch/HackNagpur-Pragati/blob/master/images/Web-home.JPG)
+![PWA-Pragati](https://github.com/TheCodeClutch/HackNagpur-Pragati/blob/master/images/PWA-home.jpeg)
 
 ## Contributors
 
