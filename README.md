@@ -18,9 +18,11 @@ Apart from making money, they can access women-centric news, raise questions, do
 
 6. We have also created a PWA (Progressive Web App) for easy phone accessibility.
 
-##### A point of concern
+
+##### For our talented artists
 
 It is no secret that today some of the most flourishing handicraft and artifact industries once started as small in-house businesses and initiatives taken up by women. But often socially backward women are not given a chance to prove their mettle which leads to the economic downfall as well as heritage loss of the country. As modernisation is transforming the nation, we almost fail to appreciate India’s traditional artifact culture that it was once famous for. Simple and beautiful handmade goods are overlooked and prioritized by imported and branded fancy goods as the country is growing economically. This is an effort from our side to help preserve India’s dying craft culture and uplift the artists who deserve to get much more success and recognition behind the efforts they are putting in the form of their passion and expertise.
+
 
 
 ### [Check it out here!](https://risewithpragati.netlify.app/)
