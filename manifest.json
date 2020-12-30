@@ -1,0 +1,44 @@
+{
+  "name": "Pragati",
+  "short_name": "Pragati",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#fdfdfd",
+  "theme_color": "#db4938",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./images/pwa-images/nav-logo-woman_72x72.jpeg",
+      "type": "image/jpeg", "sizes": "72x72"
+    },
+    {
+      "src": "./images/pwa-images/nav-logo-woman_96x96.jpeg",
+      "type": "image/jpeg", "sizes": "96x96"
+    },
+    {
+      "src": "./images/pwa-images/nav-logo-woman_128x128.jpeg",
+      "type": "image/jpeg","sizes": "128x128"
+    },
+    {
+      "src": "./images/pwa-images/nav-logo-woman_144x144.jpeg",
+      "type": "image/jpeg", "sizes": "144x144"
+    },
+    {
+      "src": "./images/pwa-images/nav-logo-woman_152x152.jpeg",
+      "type": "image/jpeg", "sizes": "152x152"
+    },
+    {
+      "src": "./images/pwa-images/nav-logo-woman_192x192.jpeg",
+      "type": "image/jpeg", "sizes": "192x192"
+    },
+    {
+      "src": "./images/pwa-images/nav-logo-woman_384x384.png",
+      "type": "image/png", "sizes": "384x384"
+    },
+    {
+      "src": "./images/pwa-images/nav-logo-woman_512x512.png",
+      "type": "image/png", "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html"
+}

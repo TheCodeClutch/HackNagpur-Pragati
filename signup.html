@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pragati | Signup</title>
+    <!-- Bootstrap CDN -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/signup.css" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script>
+        function purple(event) {
+            event.target.style.borderColor = "#961e47";
+            event.target.style.borderWidth = "2px";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-12" id="preloader">
+
+			</div>
+		</div>
+	</div>
+    <div id="sos"></div>
+    <!-- OTP Verification Modal -->
+    <div class="modal fade" id="otpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        Verify your OTP hello world
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="otp-verify-close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="number" id="modal-btn" title="Enter OTP" placeholder="Enter OTP" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="submit-modal-btn" class="btn">
+                        Verify
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of OTP Verification Modal -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/pragati-logo.jpg" alt="pragati-logo" style="height: 60px; width: 200px;" alt="Pragati" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item" style="padding-left: 30px; padding-right: 100px;">
+                    <a class="nav-link" href="login.html"><span class="fas fa-sign-in-alt"></span> Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End of Navbar -->
+
+
+
+    <div class="container-fluid" style="background-image: url('images/login-bg-new.jpg'); background-size: 100% 100%; background-repeat: no-repeat;background-position: center; background-attachment: fixed;  background-color:grey ">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Sign Up</h5>
+                        <form class="form-signin">
+                            <!-- Name -->
+                            <div class="form-label-group" style="margin-top: 40px;">
+                                <input type="text" id="name" class="form-control" placeholder="Name" required
+                                    onfocus="purple(event)" autofocus style=" border: 2px solid #961e47;"/>
+                                <label id="labelName" for="name">Name</label>
+                            </div>
+                            <!-- Email -->
+                            <div class="form-label-group">
+                                <input type="email" id="email" class="form-control" placeholder="Email address"
+                                    onfocus="purple(event)" required style=" border: 2px solid #961e47;"/>
+                                <label id="labelEmail" for="email">Email Address</label>
+                            </div>
+                            <!-- Contact -->
+                            <div class="form-label-group">
+                                <input type="tel" id="phone" class="form-control" placeholder="Contact Number"
+                                    onfocus="purple(event)" required style=" border: 2px solid #961e47;"/>
+                                <label id="labelPhone" for="phone">Contact Number</label>
+                            </div>
+                            <h6 id="postotp"
+                                style="text-decoration: underline; color: #961e47; padding-left: 18px; padding-bottom: 10px; cursor: pointer;">
+                                Verify contact number
+                            </h6>
+                            <!-- State and City - Location Details -->
+                            <div class="row form-label-group">
+                                <input type="hidden" class="form-control" name="country" id="countryId" value="IN" style=" border: 2px solid #961e47;"/>
+                                <div class="col-6">
+                                    <select name="state" class="states order-alpha" id="stateId" style=" border: 2px solid #961e47;"
+                                        onfocus="purple(event)">
+                                        <option value="">Select State</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <select name="city" class="cities order-alpha" id="cityId" onfocus="purple(event)" style=" border: 2px solid #961e47;">
+                                        <option value="">Select City</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Profession -->
+                            <div class="form-label-group">
+                                <input type="text" id="prof" class="form-control" placeholder="Your Profession"
+                                    onfocus="purple(event)" required style=" border: 2px solid #961e47;"/>
+                                <label id="labelProf" for="prof">Your Profession</label>
+                            </div>
+                            <!-- Profile Picture -->
+                            <div class="form-label-group">
+                                <input type="file" id="profile" placeholder="Profile Picture"
+                                    onfocus="purple(event)" required style="display: none;" style=" border: 2px solid #961e47;"/>
+                                <input type="button" id="new-upload-btn" class="form-control" value="Choose File"
+                                    style="width: 100%; background-color: white; border: 2px solid #961e47;"
+                                    onclick="document.getElementById('profile').click();" />
+                                <label id="labelProfile" for="profile">Profile Picture</label>
+                            </div>
+                            <!-- Password -->
+                            <div class="form-label-group">
+                                <input type="password" id="password" class="form-control" placeholder="Password" style=" border: 2px solid #961e47;"
+                                    onfocus="purple(event)" required />
+                                <label id="labelPassword" for="password">Password</label>
+                            </div>
+                            <!-- Signup button -->
+                            <div style="text-align: center;">
+                                <input class="btn btn-lg text-uppercase" value="Sign Up" id="sub" type="button" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="col-12" style="padding: 30px 0px; font-weight: bolder;">
+            &copy; Pragati 2020 |
+            <a href="index.html" style="text-decoration: none;">About Us</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/signup.js"></script>
+    <script src="./js/sos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- Sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <!-- geodata.solutions -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//geodata.solutions/includes/statecity.js"></script>
+
+</body>
+
+</html>

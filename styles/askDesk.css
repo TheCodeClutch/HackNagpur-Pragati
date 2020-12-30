@@ -1,0 +1,178 @@
+/* Navbar */
+.dropdown .dropdown-menu a:hover {
+  color: #fff;
+  background-color: #961e47;
+  border-color: #fff;
+}
+
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #da8979;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #98234b;
+}
+/* Custom Scrollbar */
+
+.buy-prod-profile {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buy-prod-profile-navbar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin-left: 20px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input {
+  border-radius: 10px;
+  border: 2px solid #e9afa3;
+  padding: 10px;
+}
+
+input:focus {
+  border-color: #842243;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  height: 80px;
+  background-color: #fcd5ce;
+}
+
+#modal-btn,
+#answer-modal-btn {
+  padding: 5px;
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  background-color: #e9c7b7;
+  color: #961e47;
+  margin-top: 10px;
+  border: 2px solid #e9c7b7;
+  box-shadow: none;
+}
+
+textarea {
+  border: 2px solid #961e47;
+  resize: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+#answer-btn {
+  padding: 5px;
+  width: 50%;
+  border-radius: 5px;
+  border: 2px solid #961e47;
+  background-color: #961e47;
+  color: white;
+  height: 40px;
+  margin-top: 10px;
+  width: 50%;
+  box-shadow: none;
+}
+
+#answer-btn:hover {
+  color: black;
+  background-color: white;
+  box-shadow: none;
+}
+
+.card-header img {
+  border: 5px solid white !important;
+}
+
+.outside {
+  position: inherit;
+  top: -50%;
+}
+
+.card {
+  border-radius: 20px !important;
+  box-shadow: 2px 2px 5px 0px #842243;
+  transition: 0.8s;
+  background-color: white !important;
+  border: 5px solid #e6c0ae;
+}
+
+.card-header {
+  border-radius: 20px !important;
+}
+
+.card-footer {
+  border-radius: 20px !important;
+}
+
+.bold {
+  font-weight: bolder;
+  color: black;
+  font-size: 30px;
+}
+
+.profile-pic {
+  margin-bottom: -5px !important;
+}
+
+.name {
+  margin-top: -50px !important;
+}
+
+.card:hover {
+  transform: scale(0.9);
+}
+
+@media (max-width: 1000px) {
+  #user-navbar-name {
+    padding-left: 20px;
+  }
+  .card:hover .card:not(:hover) {
+    transform: scale(0.9);
+  }
+}
+
+.btn {
+  background-color: #961e47;
+  color: white;
+  margin-top: 30px;
+  width: 40%;
+}
+
+.btn:hover {
+  color: white;
+}
+
+#preloader {
+	position: fixed;
+	height : 100vh;
+	z-index : 100;
+	text-align: center;
+	background: white url('/images/preloader.gif')center center no-repeat;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pragati | Login</title>
+    <!-- Bootstrap CDN -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/signup.css" />
+    <script>
+        function purple(event) {
+            event.target.style.borderColor = "#961e47";
+            event.target.style.borderWidth = "2px";
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-12" id="preloader">
+
+			</div>
+		</div>
+	</div>
+    <!-- Navbar -->
+    <div id="sos"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/pragati-logo.jpg" alt="pragati-logo" style="height: 60px; width: 200px;" alt="Pragati" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item" style="padding-left: 30px; padding-right: 100px;">
+                    <a class="nav-link" href="signup.html"><span class="fas fa-user-plus"></span> Signup</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <div class="container-fluid" style="background-image: url('images/login-bg-new.jpg'); background-size: 100% 100%; background-repeat: no-repeat;background-position: center; background-attachment: fixed;  background-color:grey ">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto" style="margin-top: 35px;">
+                <div class="card card-signin my-5" style="background-color: white;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">User Login</h5>
+                        <form class="form-signin" autocomplete="off">
+                            <div class="form-label-group" style="margin-top: 50px;">
+                                <input type="email" id="email" class="form-control" placeholder="Email address"
+                                    onfocus="purple(event)" required style=" border: 2px solid #961e47;"/>
+                                <label id="label1" for="email">Email address</label>
+                            </div>
+                            <div class="form-label-group" style="margin-top: 30px; ">
+                                <input type="password" id="password" class="form-control" placeholder="Password"
+                                    onfocus="purple(event)" required style=" border: 2px solid #961e47;"/>
+                                <label id="label2" for="password">Password</label>
+                            </div>
+                            <div id="forgotpassword" class="pt-2"
+                                style="text-decoration: underline; color: #961e47; padding-left: 18px;  padding-bottom: 10px; cursor: pointer;">
+                                <h6>Forgot Password</h6>
+                        </div>
+                            <div style="text-align: center;"  >
+                                <input class="btn btn-lg text-uppercase" type="button" value="LogIn" id="sub" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="col-12" style="padding: 30px 0px; font-weight: bolder; ">
+            &copy; Pragati 2020 |
+            <a href="index.html" style="text-decoration: none;">About Us</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/login.js"></script>
+    <script src="./js/sos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

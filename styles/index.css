@@ -1,0 +1,276 @@
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #da8979;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #98234b;
+}
+/* Custom Scrollbar */
+
+.pragati-title {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #961e47;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.btn {
+  background-color: #961e47;
+  color: white;
+  margin-top: 30px;
+  width: 60%;
+}
+
+.btn:hover {
+  color: white;
+}
+
+#preloader {
+	position: fixed;
+	height : 100vh;
+	z-index : 100;
+	text-align: center;
+	background: white url('/images/preloader.gif')center center no-repeat;
+}
+
+.dropdown .dropdown-menu a:hover {
+  color: #fff;
+  background-color: #961e47;
+  border-color: #fff;
+}
+
+.buy-prod-profile-navbar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin-left: 20px;
+}
+
+.content {
+  font-size: 17px;
+}
+
+h4 {
+  color: #f57c64;
+  font-weight: bolder;
+  font-size: 29px;
+}
+
+u {
+  color: #961e47;
+}
+
+p {
+  color: #874918;
+}
+
+.single-cards {
+  border-style: solid;
+  border-width: 5px;
+  box-shadow: 5px 10px #da8979;
+  border-color: #961e47;
+  background-color: white;
+  margin-bottom: 50px;
+  transition: 0.8s;
+  border-radius: 15px;
+}
+
+.cards-title {
+  margin-top: 15px;
+  color: #f57c64;
+  font-size: 28px !important;
+  font-weight: bolder;
+}
+
+.text {
+  padding: 10px;
+  text-align: justify;
+  color: #961e47;
+  font-size: 17px;
+}
+
+.dot {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.review {
+  font-size: 19px;
+  text-align: justify;
+  color: #874918;
+  padding: 20px;
+}
+/*
+# main Section
+--------------------------------------------------------------*/
+#main {
+  width: 100%;
+  height: 87vh;
+  background: #f0eddc;
+}
+
+#main h1 {
+  margin: 0 0 10px 0;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #da8979;
+}
+
+#main h2 {
+  color: #961e47;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.btn-get-started {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 11px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px 0 0 0;
+  color: #fff;
+  background: #961e47;
+}
+
+#main .btn-get-started:hover {
+  background: #da8979;
+  text-decoration: none;
+  color: white;
+}
+
+#main .btn-signup {
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px 0 8px 40px;
+  transition: 0.5s;
+  margin: 10px 0 0 25px;
+  color: #fff;
+  position: relative;
+  font-family: "Jost", sans-serif;
+}
+
+#main .btn-signup i {
+  color: #fff;
+  font-size: 32px;
+  position: absolute;
+  left: 0;
+  top: 7px;
+  transition: 0.3s;
+}
+
+@media (max-width: 991px) {
+  #main {
+    height: 100vh;
+    text-align: center;
+  }
+  #main .main-img {
+    text-align: center;
+  }
+  #main .main-img img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #main h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #main h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #main .main-img img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 575px) {
+  #main .main-img img {
+    width: 80%;
+  }
+  #main .btn-get-started {
+    font-size: 16px;
+    padding: 10px 24px 11px 24px;
+  }
+  #main .btn-signup {
+    font-size: 16px;
+    padding: 10px 0 8px 40px;
+    margin-left: 20px;
+  }
+}
+
+/*Swing animation */
+
+.swing {
+  animation: swing ease-in-out 1s infinite alternate;
+  transform-origin: center -20px;
+  float: left;
+}
+.swing img {
+  display: block;
+}
+.swing:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+
+  top: -10px;
+  left: 50%;
+  z-index: 0;
+
+  transform: rotate(45deg);
+}
+/* nail */
+.swing:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: -14px;
+  left: 54%;
+  z-index: 5;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  height: 80px;
+  background-color: #fcd5ce;
+}

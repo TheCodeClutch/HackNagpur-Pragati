@@ -1,0 +1,139 @@
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #da8979;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #98234b;
+}
+/* Custom Scrollbar */
+
+/* Navbar */
+.dropdown .dropdown-menu a:hover {
+  color: #fff;
+  background-color: #961e47;
+  border-color: #fff;
+}
+
+.buy-prod-profile {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.buy-prod-profile-navbar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin-left: 20px;
+}
+
+.img-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  height: 80px;
+  background-color: #fcd5ce;
+}
+
+@media (min-width: 1281px) {
+  .width-large-devices {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .width-large-devices {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .width-large-devices {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #user-navbar-name {
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #user-navbar-name {
+    padding-left: 20px;
+  }
+}
+
+.sosbtn {
+  background-color: #961e47;
+  color: white;
+  margin-top: 30px;
+  width: 40%;
+}
+
+.sosbtn:hover {
+  color: white;
+}
+
+#preloader {
+	position: fixed;
+	height : 100vh;
+	z-index : 100;
+	text-align: center;
+	background: white url('/images/preloader.gif')center center no-repeat;
+}
+
+.nav-pills .nav-item{
+  background-color: #DA8978;
+  border-radius: 10px;
+  
+}
+
+.nav-pills .nav-item .active{
+  background-color: #961e47;
+  border-radius: 10px;
+
+}
+
+
+.nav-pills a:hover{
+  color:white !important;
+}
+
+.nav-link{
+  color:#961e47;
+}
+
+ 

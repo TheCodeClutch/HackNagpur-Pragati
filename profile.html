@@ -1,0 +1,275 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pragati | Profile</title>
+    <!-- Bootstrap CDN -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/profile.css" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-12" id="preloader">
+
+			</div>
+		</div>
+	</div>
+    <div id="sos"></div>
+    <div id="modal-dump"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/pragati-logo.jpg" alt="pragati-logo" style="height: 60px; width: 200px;" alt="Pragati" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item dropdown" style="padding-left: 20px; padding-right: 20px;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar-item" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #961e47;">
+                        PRODUCTS
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="buy-products.html">Buy Products</a>
+                        <a class="dropdown-item" href="sell-products.html">Sell Products</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown" style="padding-left: 20px; padding-right: 20px;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar-item" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #961e47;">
+                        SERVICES
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="seek-services.html">Need Services</a>
+                        <a class="dropdown-item" href="post-services.html">Post Services</a>
+                    </div>
+                </li>
+                <li class="nav-item" style="padding-left: 20px; padding-right: 20px;">
+                    <a class="nav-link" href="ask-desk.html" style="color: #961e47;">ASK DESK</a>
+                </li>
+                <li class="nav-item" style="padding-left: 20px; padding-right: 20px;">
+                    <a class="nav-link" href="womenInNews.html" style="color: #961e47;">WOMEN IN NEWS</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item dropdown" style="padding-right: 100px;">
+                    <a class="nav-link" href="#" id="navbar-item" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div id="user-navbar-details"></div>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="profile.html">Your Profile</a>
+                        <a class="dropdown-item" href="index.html" onclick="logout(event);">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Interest Notifications - 1 -->
+    <div class="container-fluid" style="padding-bottom: 50px;">
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-12 col-lg-8">
+          <ul class="nav nav-pills mb-3 mt-4" id="pills-tab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="rec-interest-tab" data-toggle="pill" href="#rec-interest" role="tab" aria-controls="rec-interest" aria-selected="true">Received Interests</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="my-interest-tab" data-toggle="pill" href="#my-interest" role="tab" aria-controls="my-interest" aria-selected="false">My Interests</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="my-products-tab" data-toggle="pill" href="#my-products" role="tab" aria-controls="my-products" aria-selected="false">My Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="my-services-tab" data-toggle="pill" href="#my-services" role="tab" aria-controls="my-services" aria-selected="false">My Services</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="rec-interest" role="tabpanel" aria-labelledby="rec-interest-tab">
+              <div class="row">
+                  <div class="col-12">
+                      <h5 style="padding-top: 80px; text-align: center; padding-bottom: 20px; color:#961e47; font-weight: bolder;">
+                          Get to know who is interested in your products!
+                      </h5>
+                  </div>
+                  <div class="col-12 width-large-devices">
+                      <table class="table table-hover">
+                          <thead class="thead" style="color: #961e47; background-color: #FCD5CE; border: 2px solid #961e47;">
+                              <tr style="text-align: center;">
+                                  <th scope="col" >Serial No</th>
+                                  <th scope="col">Title</th>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">Phone number</th>
+                              </tr>
+                          </thead>
+                          <tbody id="rec-products-interest" style=" border: 2px solid #961e47; color:#961e47 ; ">
+
+                          </tbody>
+                      </table>
+                  </div>
+                  <div class="col-12">
+                      <h5 style="padding-top: 80px; text-align: center; padding-bottom: 20px; color:#961e47; font-weight: bolder;">
+                          Get to know who is interested in your services!
+                      </h5>
+                  </div>
+                  <div class="col-12 width-large-devices">
+                      <table class="table table-hover">
+                          <thead class="thead" style="color: #961e47; background-color: #FCD5CE; border: 2px solid #961e47;">
+                              <tr style="text-align: center;">
+                                  <th scope="col">Serial No</th>
+                                  <th scope="col">Title</th>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">Phone number</th>
+                              </tr>
+                          </thead>
+                          <tbody id="rec-services-interest" style=" border: 2px solid #961e47; color:#961e47 ; ">
+
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="my-interest" role="tabpanel" aria-labelledby="my-interest-tab">
+              <div class="row">
+                  <div class="col-12">
+                      <h5 style="padding-top: 80px; text-align: center; padding-bottom: 20px; color:#961e47; font-weight: bolder;">
+                          Get to know whose products are you interested in!
+                      </h5>
+                  </div>
+                  <div class="col-12 width-large-devices">
+                      <table class="table table-hover">
+                          <thead class="thead" style="color: #961e47; background-color: #FCD5CE; border: 2px solid #961e47;">
+                              <tr style="text-align: center;">
+                                  <th scope="col">Serial No</th>
+                                  <th scope="col">Title</th>
+                                  <th scope="col">Posted by</th>
+                              </tr>
+                          </thead>
+                          <tbody id="my-products-interest" style=" border: 2px solid #961e47; color:#961e47 ; ">
+
+                          </tbody>
+                      </table>
+                  </div>
+                  <div class="col-12">
+                      <h5 style="padding-top: 80px; text-align: center; padding-bottom: 20px; color:#961e47; font-weight: bolder;">
+                          Get to know whose services are you interested in!
+                      </h5>
+                  </div>
+                  <div class="col-12 width-large-devices">
+                      <table class="table table-hover">
+                          <thead class="thead" style="color: #961e47; background-color: #FCD5CE; border: 2px solid #961e47;">
+                              <tr style="text-align: center;">
+                                  <th scope="col">Serial No</th>
+                                  <th scope="col">Title</th>
+                                  <th scope="col">Posted by</th>
+                              </tr>
+                          </thead>
+                          <tbody id="my-services-interest" style=" border: 2px solid #961e47; color:#961e47 ; ">
+
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="my-products" role="tabpanel" aria-labelledby="my-products-tab">
+              <div class="row">
+                  <div class="col-12">
+                      <div class="row">
+                          <div class="col-12" style="text-align: center;">
+                              <h2 style="color: #961e47; padding-top: 30px;">My Products</h2>
+                              <h5 style="padding-top: 20px; text-align: center; padding-bottom: 20px;">
+                                  The products you posted
+                              </h5>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-12" id="your-products">
+                              <!-- cards goes here -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="my-services" role="tabpanel" aria-labelledby="my-services-tab">
+              <div class="row">
+                  <div class="col-12">
+                      <div class="row">
+                          <div class="col-12" style="text-align: center;">
+                              <h2 style="color: #961e47; padding-top: 30px;">My Services</h2>
+                              <h5 style="padding-top: 20px; text-align: center; padding-bottom: 20px;">
+                                  The services you posted
+                              </h5>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-12" id="your-services">
+                              <!-- cards goes here -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="col-12" style="padding: 30px 0px; font-weight: bolder;">
+            &copy; Pragati 2020 |
+            <a href="index.html" style="text-decoration: none;">About Us</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+
+    <script src="./js/profile.js"></script>
+    <script src="./js/sos.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+        <script>
+            function logout(event) {
+        localStorage.removeItem("token");
+    }
+        </script>
+
+</body>
+
+</html>
