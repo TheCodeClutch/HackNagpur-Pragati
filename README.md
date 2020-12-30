@@ -65,7 +65,3 @@ Link to backend repo: https://github.com/TheCodeClutch/HackNagpur-Pragati-Backen
 </tr>
 </table>
 
-
-<p align="center">
-	Made with :heart:
-</p>
