@@ -8,7 +8,7 @@ const assets = [
 	"./post-services.html",
 	"./seek-services.html",
 	"./sell-products.html",
-	"./womenInNews.html",
+	"./news.html",
 	"./signup.html",
 	"./profile.html",
 	"./styles/askDesk.css",
