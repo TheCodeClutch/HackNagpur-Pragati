@@ -18,7 +18,7 @@ window.onload = () => {
     fetch('https://pragati-api.herokuapp.com/news')
         .then(res => res.json())
         .then(res => {
-            const newsOne = res.data;
+            const newsOne = res.message.data;
             news = getUniqueListBy(newsOne, 'title')
             let content = ""
             news.forEach(ele => {
@@ -50,46 +50,46 @@ window.onload = () => {
 }
 
 
-const token = localStorage.getItem("token")
-fetch("https://pragati-api.herokuapp.com/auth/isloggedin", {
-    method: 'GET',
-    headers: {
-        'Content-Type': 'application/json',
-        'Authorization': token
-    }
-})
-
-    .then(response => response.json())
-    .then((res) => {
-
-        let userDetails = "";
-        if (res.message) {
-            userDetails =
-                userDetails +
-                `
-            <img src=${res.profile_pic} class="buy-prod-profile-navbar">
-            <div id="user-navbar-name" style="color: black;"> ${res.name} </div>`;
-            document.getElementById("user-navbar-details").innerHTML = userDetails;
-        } else {
-            document.getElementById("login-signup").innerHTML = `<li class="nav-item" style="padding-left: 30px; padding-right: 30px;">
-      <a class="nav-link" href="signup.html"
-        ><span class="fas fa-user-plus"></span> Signup</a
-      >
-    </li>
-    <li class="nav-item" style="padding-left: 30px; padding-right: 30px;">
-      <a class="nav-link" href="login.html"
-        ><span class="fas fa-sign-in-alt"></span> Login</a
-      >
-    </li>`
-        }
-    })
-    .catch((err) => {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "There was some error, contact pragatiathome@gmail.com.",
-      })
-    });
+// const token = localStorage.getItem("token")
+// fetch("https://pragati-api.herokuapp.com/auth/isloggedin", {
+//     method: 'GET',
+//     headers: {
+//         'Content-Type': 'application/json',
+//         'Authorization': token
+//     }
+// })
+//
+//     .then(response => response.json())
+//     .then((res) => {
+//
+//         let userDetails = "";
+//         if (res.message) {
+//             userDetails =
+//                 userDetails +
+//                 `
+//             <img src=${res.profile_pic} class="buy-prod-profile-navbar">
+//             <div id="user-navbar-name" style="color: black;"> ${res.name} </div>`;
+//             document.getElementById("user-navbar-details").innerHTML = userDetails;
+//         } else {
+//             document.getElementById("login-signup").innerHTML = `<li class="nav-item" style="padding-left: 30px; padding-right: 30px;">
+//       <a class="nav-link" href="signup.html"
+//         ><span class="fas fa-user-plus"></span> Signup</a
+//       >
+//     </li>
+//     <li class="nav-item" style="padding-left: 30px; padding-right: 30px;">
+//       <a class="nav-link" href="login.html"
+//         ><span class="fas fa-sign-in-alt"></span> Login</a
+//       >
+//     </li>`
+//         }
+//     })
+//     .catch((err) => {
+//       Swal.fire({
+//         icon: "error",
+//         title: "Oops...",
+//         text: "There was some error, contact pragatiathome@gmail.com.",
+//       })
+//     });
 
 
     function logout(event) {
