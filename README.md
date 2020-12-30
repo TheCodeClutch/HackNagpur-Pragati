@@ -12,7 +12,7 @@
 
 3. <p align="justify">We have implemented sentiment analysis to avoid usage of abusive words or spread of hate on the portal.</p>
 
-4. <p align="justify">To stay updated about how women are progressing in different fields, there will be a section of news and articles of their latest success stories thus motivating our future entrepreneurs.</p>
+4. <p align="justify">To stay updated about how women are progressing in different fields, there is a section of news and articles of their latest success stories thus motivating our future entrepreneurs.</p>
 
 5. <p align="justify">To prevent exploitation of users or misuse of the application, there’s an in-built SOS feature to connect helplines in case of emergency.</p>
 
