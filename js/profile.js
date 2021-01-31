@@ -2,7 +2,7 @@ document.getElementById("preloader").style.display = "block";
   const token = localStorage.getItem("token");
 
 function deletePostProduct(event) {
-    fetch('https://pragati-api.herokuapp.com/products/delete', {
+    fetch('https://streamrhack.herokuapp.com/products/delete', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -48,7 +48,7 @@ function deletePostProduct(event) {
 
 function deletePostService(event) {
 
-    fetch('https://pragati-api.herokuapp.com/services/delete', {
+    fetch('https://streamrhack.herokuapp.com/services/delete', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -418,7 +418,7 @@ function generateModalStuffService(res, target) {
     document.getElementById(target).innerHTML = content;
 }
 
-fetch("https://pragati-api.herokuapp.com/products/get", {
+fetch("https://streamrhack.herokuapp.com/products/get", {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
@@ -449,7 +449,7 @@ fetch("https://pragati-api.herokuapp.com/products/get", {
         })
     })
 
-fetch("https://pragati-api.herokuapp.com/services/get", {
+fetch("https://streamrhack.herokuapp.com/services/get", {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
@@ -481,7 +481,7 @@ fetch("https://pragati-api.herokuapp.com/services/get", {
     })
 
 
-fetch("https://pragati-api.herokuapp.com/auth/isloggedin", {
+fetch("https://streamrhack.herokuapp.com/auth/isloggedin", {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
@@ -512,7 +512,7 @@ fetch("https://pragati-api.herokuapp.com/auth/isloggedin", {
 
 
 
-fetch("https://pragati-api.herokuapp.com/products/myinterest", {
+fetch("https://streamrhack.herokuapp.com/products/myinterest", {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
@@ -566,7 +566,7 @@ fetch("https://pragati-api.herokuapp.com/products/myinterest", {
         })
     })
 
-fetch("https://pragati-api.herokuapp.com/services/myinterest", {
+fetch("https://streamrhack.herokuapp.com/services/myinterest", {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
@@ -617,7 +617,7 @@ fetch("https://pragati-api.herokuapp.com/services/myinterest", {
         })
     })
 
-fetch("https://pragati-api.herokuapp.com/products/recinterest", {
+fetch("https://streamrhack.herokuapp.com/products/recinterest", {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
@@ -668,7 +668,7 @@ fetch("https://pragati-api.herokuapp.com/products/recinterest", {
         })
     })
 
-fetch("https://pragati-api.herokuapp.com/services/recinterest", {
+fetch("https://streamrhack.herokuapp.com/services/recinterest", {
     method: "GET",
     headers: {
         "Content-Type": "application/json",

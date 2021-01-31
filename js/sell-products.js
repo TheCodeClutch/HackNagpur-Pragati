@@ -135,7 +135,7 @@ window.onload = function () {
                     text: "Please do not spread hate!!",
                 });
               } else {
-                fetch("https://pragati-api.herokuapp.com/products/add", {
+                fetch("https://streamrhack.herokuapp.com/products/add", {
                     method: "POST",
                     headers: new Headers({
                         Authorization: token,
@@ -208,7 +208,7 @@ window.onload = function () {
     });
 };
 
-fetch("https://pragati-api.herokuapp.com/auth/isloggedin", {
+fetch("https://streamrhack.herokuapp.com/auth/isloggedin", {
     method: "GET",
     headers: {
         "Content-Type": "application/json",

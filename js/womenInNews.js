@@ -15,7 +15,7 @@ window.onload = () => {
         return [...new Map(arr.map(item => [item[key], item])).values()]
     }
 
-    fetch('https://pragati-api.herokuapp.com/news')
+    fetch('https://streamrhack.herokuapp.com/news')
         .then(res => res.json())
         .then(res => {
             const newsOne = res.message.data;
@@ -51,7 +51,7 @@ window.onload = () => {
 
 
 const token = localStorage.getItem("token")
-fetch("https://pragati-api.herokuapp.com/auth/isloggedin", {
+fetch("https://streamrhack.herokuapp.com/auth/isloggedin", {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',

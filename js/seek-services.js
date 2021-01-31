@@ -4,7 +4,7 @@ window.onload = () => {
 
 
 
-fetch("https://pragati-api.herokuapp.com/auth/isloggedin", {
+fetch("https://streamrhack.herokuapp.com/auth/isloggedin", {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
@@ -194,7 +194,7 @@ function generateModalStuff(res) {
 
 document.getElementById("prodSearch").addEventListener("input", () => {
 
-    fetch("https://pragati-api.herokuapp.com/services/search?q=" + document.getElementById("prodSearch").value)
+    fetch("https://streamrhack.herokuapp.com/services/search?q=" + document.getElementById("prodSearch").value)
         .then((response) => response.json())
         .then((res) => {
             res = res.message;
@@ -210,7 +210,7 @@ document.getElementById("prodSearch").addEventListener("input", () => {
 
 })
 
-fetch("https://pragati-api.herokuapp.com/services/getall", {
+fetch("https://streamrhack.herokuapp.com/services/getall", {
     method: "GET",
     headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -230,7 +230,7 @@ fetch("https://pragati-api.herokuapp.com/services/getall", {
       })
     });
 
-fetch("https://pragati-api.herokuapp.com/auth/isloggedin", {
+fetch("https://streamrhack.herokuapp.com/auth/isloggedin", {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
@@ -282,7 +282,7 @@ function registerInterest(event) {
   document.getElementById(`interest-cover-${prodId}`).removeChild(event.target)
   document.getElementById(`interest-cover-${prodId}`).appendChild(div);
 
-    fetch('https://pragati-api.herokuapp.com/services/interested', {
+    fetch('https://streamrhack.herokuapp.com/services/interested', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",

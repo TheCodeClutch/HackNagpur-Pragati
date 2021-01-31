@@ -33,7 +33,7 @@ function generateModal(customId) {
     // User details - Navbar
     const token = localStorage.getItem("token");
     // please wait ...
-    fetch("https://pragati-api.herokuapp.com/auth/isloggedin", {
+    fetch("https://streamrhack.herokuapp.com/auth/isloggedin", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -120,7 +120,7 @@ function generateModal(customId) {
             } else {
 
               document.getElementById("modal-btn").value = "Please Wait...";
-              fetch("https://pragati-api.herokuapp.com/askdesk/add/question", {
+              fetch("https://streamrhack.herokuapp.com/askdesk/add/question", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
@@ -180,7 +180,7 @@ function generateModal(customId) {
     document.getElementById("quesSearch").addEventListener("input", (event) => {
       const query = event.target.value;
 
-      fetch("https://pragati-api.herokuapp.com/askdesk/search?q=" + query)
+      fetch("https://streamrhack.herokuapp.com/askdesk/search?q=" + query)
         .then((res) => res.json())
         .then((res) => {
 
@@ -326,7 +326,7 @@ function generateModal(customId) {
             });
           } else {
             document.getElementById("answer-modal-btn").value = "Please Wait...";
-            fetch("https://pragati-api.herokuapp.com/askdesk/add/answer", {
+            fetch("https://streamrhack.herokuapp.com/askdesk/add/answer", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

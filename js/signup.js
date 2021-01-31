@@ -23,7 +23,7 @@ window.onload = function () {
 
     document.getElementById("postotp").innerHTML = "Sending OTP...";
 
-    fetch("https://pragati-api.herokuapp.com/auth/postotp", {
+    fetch("https://streamrhack.herokuapp.com/auth/postotp", {
       method: "POST",
       headers: new Headers({ "content-type": "application/json" }),
       body: JSON.stringify({
@@ -53,7 +53,7 @@ window.onload = function () {
           }).then((result) => {
               if(result.isConfirmed){
                 document.getElementById("postotp").innerHTML = "Verifying OTP..."
-                fetch("https://pragati-api.herokuapp.com/auth/verifyphone", {
+                fetch("https://streamrhack.herokuapp.com/auth/verifyphone", {
                   method: "POST",
                   headers: new Headers({ "content-type": "application/json" }),
                   body: JSON.stringify({
@@ -233,7 +233,7 @@ window.onload = function () {
       formData.append("phoneNumber", Number("91" + phone));
 
       document.getElementById("sub").value = "Loading...";
-      fetch("https://pragati-api.herokuapp.com/auth/signup", {
+      fetch("https://streamrhack.herokuapp.com/auth/signup", {
         method: "POST",
         body: formData,
       })

@@ -174,7 +174,7 @@ window.onload = () => {
 
 document.getElementById("prodSearch").addEventListener("input", () => {
     fetch(
-        "https://pragati-api.herokuapp.com/products/search?q=" +
+        "https://streamrhack.herokuapp.com/products/search?q=" +
         document.getElementById("prodSearch").value
     )
         .then((response) => response.json())
@@ -187,7 +187,7 @@ document.getElementById("prodSearch").addEventListener("input", () => {
         });
 });
 
-fetch("https://pragati-api.herokuapp.com/products/getall", {
+fetch("https://streamrhack.herokuapp.com/products/getall", {
     method: "GET",
     headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -204,7 +204,7 @@ fetch("https://pragati-api.herokuapp.com/products/getall", {
     });
 
 const token = localStorage.getItem("token");
-fetch("https://pragati-api.herokuapp.com/auth/isloggedin", {
+fetch("https://streamrhack.herokuapp.com/auth/isloggedin", {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
@@ -262,7 +262,7 @@ function registerInterest(event) {
     document.getElementById(`interest-cover-${prodId}`).appendChild(div);
 
 
-    fetch("https://pragati-api.herokuapp.com/products/interested", {
+    fetch("https://streamrhack.herokuapp.com/products/interested", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

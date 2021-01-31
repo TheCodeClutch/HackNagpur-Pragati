@@ -13,7 +13,7 @@ window.onload = () => {
       })
       .then(result => {
         if(result.isConfirmed){
-          fetch("https://pragati-api.herokuapp.com/auth/forgotpw", {
+          fetch("https://streamrhack.herokuapp.com/auth/forgotpw", {
               method: "POST",
               headers: new Headers({ "content-type": "application/json" }),
               body: JSON.stringify({
@@ -94,7 +94,7 @@ window.onload = () => {
             
             document.getElementById("sub").value = "Loading...";
 
-            fetch("https://pragati-api.herokuapp.com/auth/login", {
+            fetch("https://streamrhack.herokuapp.com/auth/login", {
                 method: "POST",
                 headers: new Headers({ "content-type": "application/json" }),
                 body: JSON.stringify({
