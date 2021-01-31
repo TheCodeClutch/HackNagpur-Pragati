@@ -43,7 +43,7 @@ store['NAGALAND'] = '181'
 store['MIZORAM'] = '181'
 store['MEGHALAYA'] = '112'
 
-fetch("https://pragati-api.herokuapp.com/auth/isloggedin", {
+fetch("https://streamrhack.herokuapp.com/auth/isloggedin", {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
@@ -92,6 +92,17 @@ function getLocation() {
 }
 
 function showPosition(position) {
+
+  fetch('https://streamrhack.herokuapp.com/visit')
+  .then(res => res.json())
+  .then(res => {
+      console.log('Visit regsitered')
+  })
+  .catch(err => {
+      console.log('There was some error')
+  })
+
+  
   fetch(`https://api.opencagedata.com/geocode/v1/json?q=${position.coords.latitude}+${position.coords.longitude}&key=5db5a96f174d46e389853c0ec12d44a2`)
     .then(res => res.json())
     .then(res => {
