@@ -93,7 +93,16 @@ function getLocation() {
 
 function showPosition(position) {
 
-  fetch('https://streamrhack.herokuapp.com/visit')
+  fetch('https://streamrhack.herokuapp.com/visit', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      latitude: position.coords.latitude,
+      longitude: position.coords.longitude,
+    })
+  })
   .then(res => res.json())
   .then(res => {
       console.log('Visit regsitered')
@@ -127,7 +136,7 @@ if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
     navigator.serviceWorker
       .register("./sw.js")
-      .then(res)
-      .catch(err)
+      .then(res => {console.log(res)})
+      .catch(err => {console.log(err)})
   })
 }
