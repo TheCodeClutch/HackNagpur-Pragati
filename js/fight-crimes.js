@@ -1,6 +1,8 @@
 let latitude = 0;
 let longitude = 0;
 
+window.localStorage.setItem('crime-reported', false);
+
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -45,30 +47,35 @@ window.onload = function () {
 
                 //Fetch call to be added
 
-                fetch('https://streamrhack.herokuapp.com/register/complaints', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': "application/json"
-                    },
-                    body: JSON.stringify({
-                        latitude: latitude,
-                        longitude: longitude,
-                        age: age ,
-                        type: crime,
-                        description: desc
+                if(!Boolean(window.localStorage.getItem("crime-report"))){
+                    fetch('https://streamrhack.herokuapp.com/register/complaints', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': "application/json"
+                        },
+                        body: JSON.stringify({
+                            latitude: latitude,
+                            longitude: longitude,
+                            age: age ,
+                            type: crime,
+                            description: desc
+                        })
                     })
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        if(data.message){
-                            console.log(data)
-                        } else {
-                            console.log('Got some error ', data.error)
-                        }
-                    })
-                    .catch(err => {
-                        // some error
-                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            if(data.message){
+                                console.log(data)
+                                window.localStorage.setItem('crime-reported', true);
+                            } else {
+                                console.log('Got some error ', data.error)
+                            }
+                        })
+                        .catch(err => {
+                            // some error
+                        })
+                }
+
+
             }
     });
 };
