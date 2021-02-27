@@ -86,6 +86,12 @@ window.onload = function () {
                         .catch(err => {
                             // some error
                         })
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops..',
+                        text: 'You cannot post multiple crime reports!',
+                    })
                 }
 
 
