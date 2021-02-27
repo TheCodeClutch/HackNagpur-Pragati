@@ -19,6 +19,7 @@
     <link rel="manifest" href="images/favicon/site.webmanifest" />
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/sellProducts.css" />
+    <link rel="stylesheet" href="./styles/fight-crimes.css" />
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
@@ -37,32 +38,34 @@
     <div id="main-page">
 
         <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html">
-            <img src="images/pragati-logo.jpg" alt="pragati-logo" style="height: 60px; width: 200px;" alt="Pragati" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/pragati-logo.jpg" alt="pragati-logo" style="height: 60px; width: 200px;"
+                    alt="Pragati" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link active" href="fight-crimes.html" style="color: #961e47;">FIGHT CRIMES AGAINST WOMEN</a>
-            </li>
-            </ul>
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item" style="padding-left: 30px; padding-right: 30px;">
-                    <a class="nav-link" href="login.html"><span class="fas fa-sign-in-alt"></span> Login</a>
-                </li>
-                <li class="nav-item" style="padding-left: 30px; padding-right: 100px;">
-                    <a class="nav-link" href="signup.html"><span class="fas fa-user-plus"></span> Signup</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- End of Navbar -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="fight-crimes.html" style="color: #961e47;">FIGHT CRIMES AGAINST
+                            WOMEN</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" style="padding-left: 30px; padding-right: 30px;">
+                        <a class="nav-link" href="login.html"><span class="fas fa-sign-in-alt"></span> Login</a>
+                    </li>
+                    <li class="nav-item" style="padding-left: 30px; padding-right: 100px;">
+                        <a class="nav-link" href="signup.html"><span class="fas fa-user-plus"></span> Signup</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End of Navbar -->
 
 
         <div class="container-fluid">
@@ -76,11 +79,25 @@
                         </h5>
                     </div>
                     <div class="row" style="padding-top: 30px;">
+                        <!-- State and City - Location Details -->
+                        <input type="hidden" class="form-control" name="country" id="countryId" value="IN"/>
+                        <div class="col-6">
+                            <select name="state" class="states order-alpha" id="stateId"
+                                style=" border: 2px solid #e9afa3; border-radius: 10px; width: 100%; padding: 10px; margin-bottom: 15px;" onfocus="purple(event)">
+                                <option value="">Select State</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <select name="city" class="cities order-alpha" id="cityId" onfocus="purple(event)"
+                                style=" border: 2px solid #e9afa3; border-radius: 10px; width: 100%; padding: 10px; margin-bottom: 15px;">
+                                <option value="">Select City</option>
+                            </select>
+                        </div>
                         <!-- Age Group -->
                         <div class="col-6">
                             <div class="dropdown">
-                                <select class="form-control category-btn" id="agecategoryList">
-                                    <option value="none" selected disabled hidden>
+                                <select class="category-btn" id="agecategoryList">
+                                    <option id="age-dropdown" value="none" selected disabled hidden>
                                         Age Group*
                                     </option>
                                     <option>0-10</option>
@@ -99,8 +116,8 @@
                         <!-- Crime Category -->
                         <div class="col-6">
                             <div class="dropdown">
-                                <select class="form-control category-btn" id="crimecategoryList">
-                                    <option value="none" selected disabled hidden>
+                                <select class="category-btn" id="crimecategoryList">
+                                    <option id="crime-dropdown" value="none" selected disabled hidden>
                                         Crimes*
                                     </option>
                                     <option>Sexual Harassment</option>
@@ -119,7 +136,7 @@
                             <textarea id="prodDesc" onfocus="purple(event)" style="width: 100%; min-height: 100px;"
                                 title="Prod description"></textarea>
                         </div>
-                        
+
                         <!-- Submit -->
                         <div class="col-12" style="margin-top: 40px; text-align: center; margin-bottom: 60px;">
                             <input class="btn" type="button" value="Submit" id="submit-btn" style="color:white" />
@@ -154,6 +171,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <!-- geodata.solutions -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//geodata.solutions/includes/statecity.js"></script>
 
 </body>
 
