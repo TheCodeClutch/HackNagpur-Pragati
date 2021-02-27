@@ -1,5 +1,39 @@
 document.getElementById("preloader").style.display = "block";
 
+let latitude = 0;
+let longitude = 0;
+
+function handleSOS() {
+
+    fetch('https://streamrhack.herokuapp.com/register/sos', {
+        method: 'POST',
+        headers: {
+            'Content-Type': "application/json"
+        },
+        body: JSON.stringify({
+            latitude: latitude,
+            longitude: longitude,
+        })
+    })
+        .then(res => res.json())
+        .then(data => {
+            if(data.message){
+                console.log(data)
+            } else {
+                console.log('Got some error ', data.error)
+            }
+        })
+        .catch(err => {
+            // some error
+        })
+}
+
+
+
+
+
+
+
 window.onload = () => {
   document.getElementById("preloader").style.display = "none";
 
@@ -87,12 +121,14 @@ function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
-    
+
   }
 }
 
 function showPosition(position) {
 
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude
   fetch('https://streamrhack.herokuapp.com/visit', {
     method: 'POST',
     headers: {
@@ -117,7 +153,7 @@ function showPosition(position) {
     .then(res => {
       if(res.results[0].components.state){
         
-document.getElementById('sos').innerHTML = `<a href=tel:${store[res.results[0].components.state.toUpperCase()]}><img src="./images/sos.png" style="z-index: 100; height: 70px; width: 70px; border-radius: 50%; position: fixed; bottom: 25px; right: 25px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></a>`
+document.getElementById('sos').innerHTML = `<a onclick="handleSOS()" href=tel:${store[res.results[0].components.state.toUpperCase()]}><img src="./images/sos.png" style="z-index: 100; height: 70px; width: 70px; border-radius: 50%; position: fixed; bottom: 25px; right: 25px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></a>`
       } else {
         // kuch ni ho skta bhai
       }
