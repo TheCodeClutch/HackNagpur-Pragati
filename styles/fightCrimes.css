@@ -1,0 +1,17 @@
+input:focus {
+  outline: none;
+}
+
+/* Input focus */
+.form-control:focus {
+  box-shadow: none;
+  border: 2px solid #961e47;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
