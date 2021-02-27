@@ -62,8 +62,18 @@ window.onload = function () {
                     .then(data => {
                         if(data.message){
                             console.log(data)
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'You are brave and courageous!',
+                                text: 'You reported the crime successfully, Pragati is with you!'
+                            })
                         } else {
                             console.log('Got some error ', data.error)
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops..',
+                                text: 'There was an error posting your query. Please try again!',
+                            })
                         }
                     })
                     .catch(err => {
